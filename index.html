@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora de Preços de Livros</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="calculadora">
+            <h1>Calculadora de Preços de Livros</h1>
+            <div id="informacoes">
+                <h2>Quantidade de Livros</h2>
+                <input type="number" id="livros" placeholder="Quantidade de Livros">
+                <h2>Preço por Livro (Em R$)</h2>
+                <input type="number" id="preco" placeholder="Preço por Livro (em R$)">
+                <button onclick="multiplicar()">Calcular</button>
+                <div>
+                    <p id="presultado">Resultado:</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function multiplicar() {
+            let livros = document.getElementById('livros').value;
+            let preco = document.getElementById('preco').value;
+            let resultado = livros * preco;
+            let presultado = document.getElementById("presultado");
+            presultado.textContent = "Resultado: " + resultado.toFixed(2) + " R$";
+        }
+    </script>
+</body>
+
+</html>
